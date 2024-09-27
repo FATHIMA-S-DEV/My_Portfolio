@@ -1,0 +1,18 @@
+.footer{
+    margin-top: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    color: gold;
+    background-color: rgb(27, 27, 70);
+    height: 200px;
+    }
+    .rightsection{
+        margin-top: 40px;
+        
+    }
+    .leftsection{
+        margin-top: 40px;
+    }
+    li{
+        list-style: none;
+    }
