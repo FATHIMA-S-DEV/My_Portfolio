@@ -1,0 +1,41 @@
+.about-container {
+    background-color: #BDBDBD; 
+    color: #ffffff; /* Light text color */
+    padding: 50px;
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+    opacity: 0; /* Start fully transparent */
+    transform: translateX(-50%); /* Start from the left */
+    animation: slideIn 0.7s ease forwards; /* Slide-in animation with easing */
+}
+
+.about-content {
+    max-width: 800px; /* Limit the width of the content */
+    text-align: left; /* Align text to the left */
+
+}
+
+h1 {
+    color: rgb(27, 27, 70);
+    font-size: 2.5em;
+    margin-bottom: 20px; /* Space below the header */
+}
+
+p {
+    font-size: 1.2em; /* Font size for the paragraph */
+    line-height: 1.6; /* Space between lines */
+    color:black;
+}
+
+/* Keyframes for the slide-in animation */
+@keyframes slideIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+        transform: translateX(-100%); /* Start off-screen */
+    }
+    to {
+        opacity: 1; /* Fade in */
+        transform: translateX(0); /* Slide to original position */
+    }
+}

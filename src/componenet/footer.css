@@ -1,18 +1,45 @@
-.footer{
-    margin-top: 500px;
-    display: flex;
-    justify-content: space-evenly;
-    color: gold;
-    background-color: rgb(27, 27, 70);
-    height: 200px;
-    }
-    .rightsection{
-        margin-top: 40px;
-        
-    }
-    .leftsection{
-        margin-top: 40px;
-    }
-    li{
-        list-style: none;
-    }
+.footer-container {
+    background-color: #989898; /* Background color matching the theme */
+    color: #ffffff; /* White text for contrast */
+    padding: 20px; /* Padding for spacing */
+    border-top: 1px solid #ddd; /* Top border for separation */
+  }
+  
+  .footer-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    
+  }
+  
+  .social-links {
+    display: flex; /* Flexbox for the social links section */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .footer-links {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin-left: 15px; /* Space between text and links */
+  }
+  
+  .footer-links li {
+    display: inline; /* Inline list items */
+    margin: 0 10px; /* Spacing between links */
+  }
+  
+  .footer-links a {
+    color: #ffffff; /* White link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+  }
+  
+  .footer-links a:hover {
+    color: #ffd700; /* Gold color on hover */
+  }
+  
+  .footer-bottom {
+    font-size: 14px; /* Smaller font size for copyright */
+  }
+  

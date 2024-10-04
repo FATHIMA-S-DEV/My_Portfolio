@@ -1,0 +1,73 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.about-container {
+    display: flex; /* Use flexbox to align image and info */
+    align-items: center; /* Center items vertically */
+    padding: 50px;
+    gap: 50px;
+    background: #989898; /* White smoke effect */
+    margin: 20px; /* Add margin around the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Start fully transparent */
+    transform: translateX(-50%); /* Start from the left */
+    animation: slideIn 0.7s ease forwards; /* Slide-in animation with easing */
+}
+
+/* Image styling */
+.about-image {
+    max-width: 300px; /* Limit image width */
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 10px; /* Optional rounded corners for image */
+}
+
+/* Info container styling */
+.about-info {
+    flex: 1; /* Take remaining space */
+}
+
+h1 {
+    color: rgb(27, 27, 70);
+}
+
+p {
+    text-align: justify;
+    color: black; /* Dark text for readability */
+    line-height: 1.6; /* Spacing between lines */
+    font-size: 20px;
+}
+
+/* Keyframes for the slide-in animation */
+@keyframes slideIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+        transform: translateX(-100%); /* Start off-screen */
+    }
+    to {
+        opacity: 1; /* Fade in */
+        transform: translateX(0); /* Slide to original position */
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center items */
+        padding: 20px; /* Reduce padding */
+    }
+
+    .about-image {
+        max-width: 100%; /* Allow image to take full width on smaller screens */
+        margin-right: 0; /* Remove right margin on smaller screens */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+    }
+
+    p {
+        font-size: 18px; /* Slightly reduce font size for better readability */
+    }
+}
