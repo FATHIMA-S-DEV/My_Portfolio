@@ -1,9 +1,17 @@
+/* Global body styling */
 body {
     font-family: 'Times New Roman', Times, serif;
 }
 
+/* Navbar adjustment: Add some margin between the navbar and home section */
+#home {
+    margin-top: 100px; /* Adjust the margin to add space between the navbar and Home */
+}
+
+/* About container styles */
 .about-container {
     display: flex; /* Use flexbox to align image and info */
+    justify-content: space-between; /* Align image and text to opposite sides */
     align-items: center; /* Center items vertically */
     padding: 50px;
     gap: 50px;
@@ -11,17 +19,14 @@ body {
     margin: 20px; /* Add margin around the container */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0; /* Start fully transparent */
-    transform: translateX(-50%); /* Start from the left */
-    animation: slideIn 0.7s ease forwards; /* Slide-in animation with easing */
 }
 
-/* Image styling */
+/* Image styling: Position image on the right side */
 .about-image {
     max-width: 300px; /* Limit image width */
     width: 100%; /* Make image responsive */
     height: auto; /* Maintain aspect ratio */
-    margin-right: 20px; /* Space between image and text */
+    margin-left: 20px; /* Add space between text and image */
     border-radius: 10px; /* Optional rounded corners for image */
 }
 
@@ -41,30 +46,18 @@ p {
     font-size: 20px;
 }
 
-/* Keyframes for the slide-in animation */
-@keyframes slideIn {
-    from {
-        opacity: 0; /* Start fully transparent */
-        transform: translateX(-100%); /* Start off-screen */
-    }
-    to {
-        opacity: 1; /* Fade in */
-        transform: translateX(0); /* Slide to original position */
-    }
-}
-
 /* Responsive Styles */
 @media (max-width: 768px) {
     .about-container {
-        flex-direction: column; /* Stack image and text vertically */
+        flex-direction: column; /* Stack text first, image second in smaller screens */
         align-items: center; /* Center items */
         padding: 20px; /* Reduce padding */
     }
 
     .about-image {
         max-width: 100%; /* Allow image to take full width on smaller screens */
-        margin-right: 0; /* Remove right margin on smaller screens */
-        margin-bottom: 20px; /* Add bottom margin for spacing */
+        margin-left: 0; /* Remove left margin */
+        margin-top: 20px; /* Add top margin for spacing */
     }
 
     p {

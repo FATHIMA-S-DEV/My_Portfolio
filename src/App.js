@@ -7,6 +7,7 @@ import Navbar from './componenet/Navbar'
 import Skill from './componenet/Skill'
 import Footer from './componenet/footer'
 import Project from './componenet/Project'
+import Contact from './componenet/Contact'
 
 
 
@@ -20,6 +21,7 @@ const App = () => {
     <About/>
     <Skill/>
     <Project/>
+    <Contact/>
     <Footer/>
 
 

@@ -1,127 +1,69 @@
-/* Side content styling */
-.side {
-    float: left;
-    color: gray;
-    padding: 20px;
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
-    list-style: none;
-}
-
-/* Header styling to contain both side and navigation */
-header {
+/* Navbar styles */
+.nav {
     background-color: rgb(27, 27, 70);
     width: 100%;
     height: 80px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-top: 0;
-    padding: 0 20px;
-    z-index: 1000;
-    box-sizing: border-box;
-    position: fixed; /* Fix the header to the top */
+    position: fixed; /* Fix the navbar to the top */
     top: 0; /* Align it to the top */
     left: 0; /* Align it to the left */
+    z-index: 1000; /* Ensure it stays above other components */
+    padding: 0 20px; /* Add padding */
+}
+
+/* Responsive styles */
+.toggle-bar {
+    display: none; /* Hidden by default in laptop view */
+    flex-direction: column; /* Stack bars vertically */
+    cursor: pointer; /* Change cursor on hover */
+    margin-right: auto; /* Align toggle bar to the left */
+}
+
+.bar {
+    height: 4px; /* Thickness of the bar */
+    width: 25px; /* Width of the bar */
+    background-color: gold; /* Color of the bars */
+    margin: 3px 0; /* Space between bars */
+}
+
+/* Navigation styling */
+.navigation {
+    display: flex;
+    justify-content: flex-end; /* Align links to the right */
+    gap: 50px; /* Space between links */
+}
+
+a {
+    color: gold; /* Link color */
+    text-decoration: none; /* Remove underline */
+    padding: 5px 10px; /* Consistent padding */
+    border-radius: 5px; /* Optional, if you want rounded corners */
+    transition: color 0.3s ease; /* Transition for hover */
 }
 
 .header-transparent {
     background-color: rgba(128, 128, 128, 0.7); /* Gray with 70% opacity */
 }
 
-.header-transparent .side {
-    color: yellow; /* Change the color to your desired color */
-}
-
-/* Body reset */
-body {
-    margin: 0;
-    padding: 0;
-    padding-top: 80px; /* Add top padding to prevent overlap with fixed header */
-}
-
-/* Navigation styling */
-nav {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    gap: 50px;
-    padding: 0;
-    margin: 0;
-}
-
-/* General anchor tag styling */
-a {
-    position: relative; /* Required for the ::after pseudo-element positioning */
-    text-decoration: none;
-    color: gold;
-    padding: 5px 10px; /* Consistent padding */
-    border-radius: 5px; /* Optional, if you want rounded corners */
-    display: inline-block; /* Ensure the anchor is a block element */
-    box-sizing: border-box; /* Prevent padding from altering size */
-    transition: color 0.3s ease; /* Transition only color for hover */
-}
-
-/* Underline effect using ::after pseudo-element */
-a::after {
-    content: ''; /* Empty content for the pseudo-element */
-    position: absolute; /* Position it relative to the anchor */
-    left: 50%; /* Start from the middle */
-    bottom: 0; /* Position at the bottom of the text */
-    width: 0; /* Start with a width of 0 */
-    height: 2px; /* Thickness of the underline */
-    background-color: gold; /* Color of the underline */
-    transition: width 0.3s ease, left 0.3s ease; /* Animate width and left position */
-}
-
-/* Hover effect */
-a:hover {
-    color: gold; /* Change text color on hover */
-}
-
-/* Underline effect on hover */
-a:hover::after {
-    width: 100%; /* Expand the width to full */
-    left: 0; /* Move to the left to cover the entire width */
-}
-
-/* Focus state */
-a:focus {
-    outline: none; /* Remove browser's default focus outline */
-}
-
-/* Ensure no size changes on hover/focus */
-a:active {
-    transform: translateY(1px); /* Optional: Slight press effect on click */
-    outline: none;
-}
-
-/* Sections styling */
-section {
-    padding-top: 80px; /* Equal to the height of the navbar */
-    margin-top: -80px; /* Negative margin to offset the top padding */
-}
-
-/* Responsive navigation */
+/* Responsive styles */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Stack navigation items vertically */
-        align-items: center; /* Center items */
-        gap: 20px; /* Space between items */
-        padding: 20px 0; /* Add padding for better spacing */
-        width: 100%; /* Ensure it takes the full width */
+    .navigation {
+        position: absolute; /* Use absolute positioning for mobile view */
+        top: 80px; /* Below the navbar */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        display: flex; /* Use flexbox for alignment */
+        flex-direction: column; /* Stack links vertically */
+        background-color: rgb(27, 27, 70); /* Same color as navbar */
+        display: none; /* Initially hidden */
     }
 
-    .side {
-        display: none; /* Hide side content on smaller screens */
+    .navigation.open {
+        display: flex; /* Show when open */
     }
 
-    /* Adjust header size */
-    header {
-        height: auto; /* Allow height to adjust */
-    }
-
-    .header-transparent {
-        background-color: rgb(27, 27, 70); /* Set a solid color in mobile view */
+    .toggle-bar {
+        display: flex; /* Show toggle bar in mobile view */
     }
 }

@@ -1,149 +1,127 @@
-body{
-    font-family: 'Times New Roman', Times, serif;
-}.projects-container {
-    padding: 50px;
-    background-color: #BDBDBD;;
-    border-radius: 10px;
-    max-width: 1385px; /* Set maximum width */
-    margin: 20px auto; /* Center the container */
-    opacity: 0; /* Start fully transparent */
-    transform: translateX(-50%); /* Start from the left */
-    animation: slideIn 0.7s ease forwards; /* Slide-in animation with easing */
-
-  
-  }
-  .button-container {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: space-between; /* Space between buttons */
-    width: 50%; /* Full width for button container */
-  }
-  
-  .learn-more-btn,
-  .demo-btn {
-    background-color: #4CAF50; /* Green background for buttons */
-    color: white; /* White text color */
-    border: none; /* No border */
-    padding: 10px 20px; /* Padding */
-    text-align: center; /* Center text */
-    text-decoration: none; /* No underline */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth background transition */
-    flex: 1; /* Allow buttons to grow equally */
-    margin: 0 5px; /* Margin between buttons */
-  }
-  
-  
-  .learn-more-btn {
-    background-color:rgb(27, 27, 70); /* Blue background for Learn More button */
-  }
-  
-  .learn-more-btn:hover {
-    background-color: gold /* Darker blue on hover */
-  }
-  
-  .demo-btn:hover {
-    background-color:gold /* Darker green on hover */
-  }
-  
-  
-  
-  
-
-  
-  
-  .projects-container h2 {
-    text-align: center;
-    font-size: 2.5rem; /* Increased font size for the header */
-    margin-bottom: 30px;
-  }
-  
-  .projects-grid {
-    display: flex;
-    justify-content: space-between; /* Space between sections */
-    gap: 20px; /* Space between sections */
-  }
-  
-  .projects-section {
-    display: flex;
-    flex-direction: column; /* Stack cards vertically in sections */
-    gap: 20px; /* Space between project cards */
-    flex: 1; /* Allow sections to grow equally */
-  }
-  
-  .project-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 50px;
-    text-align: center;
-    transition: transform 0.3s ease;
-    height: 600px; /* Set fixed height for cards */
-    display: flex;
-    flex-direction: column; /* Stack items vertically in the card */
-    align-items: center; /* Center align items */
-    width: 80%;
-    margin-left: 20px;
-    
-  }
-  
-  .project-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .project-image {
-    width: 100%; /* Full width of the card */
-    height: 400px; /* Fixed height for vertical images */
-    object-fit: cover; /* Cover to maintain aspect ratio */
-    border-radius: 10px; /* Rounded corners for images */
-  }
-  
-  .project-card h4 {
-    margin: 15px 0;
-    color: rgb(27, 27, 70);
-    font-size: 1.5rem; /* Reduced font size for project titles */
-  }
-  
-  .project-card p {
-    font-size: 1rem; /* Font size for descriptions */
-    width: 80%;
-    margin-bottom: 20px;
-  }
-
-  .projects-container h2 {
-    text-align: left;
-    font-size: 2.5rem; /* Increased font size for the header */
-    margin-bottom: 30px;
-    color: rgb(27, 27, 70);
+body {
+  font-family: 'Times New Roman', Times, serif;
 }
- 
- 
-  
+
+.projects-container {
+  padding: 50px;
+  background-color: #BDBDBD;
+  border-radius: 10px;
+  max-width: 1385px;
+  margin: 20px auto;
+  opacity: 0;
+  transform: translateX(-50%);
+  animation: slideIn 0.7s ease forwards;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.learn-more-btn,
+.demo-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  flex: 1;
+  margin: 0 5px;
+}
+
+.learn-more-btn {
+  background-color: rgb(27, 27, 70);
+}
+
+.learn-more-btn:hover {
+  background-color: gold;
+}
+
+.demo-btn:hover {
+  background-color: gold;
+}
+
+.projects-container h2 {
+  text-align: left;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: rgb(27, 27, 70);
+}
+
+.projects-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px; /* Reduced padding for a compact card */
+  text-align: center;
+  transition: transform 0.3s ease;
+  height: 500px; /* Adjusted card height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: 250px; /* Ensures all images have the same height */
+  object-fit: cover; /* Ensures images are resized uniformly */
+  border-radius: 10px;
+  margin-bottom: 20px; /* Space between image and content */
+}
+
+
+
+.project-card h4 {
+  margin: 10px 0;
+  color: rgb(27, 27, 70);
+  font-size: 1.5rem;
+}
+
+.project-card p {
+  font-size: 1rem;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
 /* Keyframes for the slide-in animation */
 @keyframes slideIn {
-    from {
-        opacity: 0; /* Start fully transparent */
-        transform: translateX(-100%); /* Start off-screen */
-    }
-    to {
-        opacity: 1; /* Fade in */
-        transform: translateX(0); /* Slide to original position */
-    }
-}
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .projects-section {
-      align-items: center; /* Center the items */
-    }
-  
-    .project-card {
-      width: 90%; /* Adjust card width for smaller screens */
-    }
-  
-    .project-image {
-      height: 200px; /* Reduce height on small screens */
-    }
+  from {
+      opacity: 0;
+      transform: translateX(-100%);
   }
-  
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .projects-grid {
+      flex-direction: column;
+  }
+
+  .project-card {
+      width: 90%;
+  }
+
+  .project-image {
+      height: 200px; /* Responsive height for mobile screens */
+  }
+}

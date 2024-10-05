@@ -1,55 +1,4 @@
-/* Common background and layout styling for about and skills sections */
-.common-container {
-  background-color: #BDBDBD; /* Matching background color */
-  padding: 70px; /* Increased padding for vertical space */
-  display: flex;
-  justify-content: flex-start; /* Align items to the left */
-  align-items: center;
-  opacity: 0; /* Start fully transparent */
-  transform: translateX(-50%); /* Start from the left */
-  animation: slideIn 0.7s ease forwards; /* Slide-in animation with easing */
-  max-width: 1500px; /* Adjusted maximum width */
-  width: 90%; /* Set width to 90% of the container */
-  margin: 20px auto; /* Centered with margin */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
-}
-
-/* Specific styles for About section */
-.about-container {
-  color: #ffffff; /* Light text color */
-}
-
-.about-content {
-  max-width: 800px; /* Limit the width of the content */
-  text-align: left; /* Align text to the left */
-}
-
-h1 {
-  color: rgb(27, 27, 70);
-  font-size: 2.5em;
-  margin-bottom: 20px; /* Space below the header */
-}
-
-p {
-  font-size: 1.2em; /* Font size for the paragraph */
-  line-height: 1.6; /* Space between lines */
-  color: black;
-}
-
-/* Keyframes for the slide-in animation */
-@keyframes slideIn {
-  from {
-      opacity: 0; /* Start fully transparent */
-      transform: translateX(-100%); /* Start off-screen */
-  }
-  to {
-      opacity: 1; /* Fade in */
-      transform: translateX(0); /* Slide to original position */
-  }
-}
-
-/* Skills container section */
+/* Skills Section Styles */
 .skills-container {
   padding: 60px; /* Increased padding for vertical space */
   background: #BDBDBD; /* Matching background color */
@@ -58,12 +7,11 @@ p {
   max-width: 1600px; /* Adjusted maximum width */
   width: 90%; /* Set width to 90% of the container */
   margin: 20px auto; /* Centered with margin */
-  opacity: 0; /* Start fully transparent */
-  transform: translateX(-50%); /* Start from the left */
-  animation: slideIn 0.7s ease forwards; /* Slide-in animation */
+  opacity: 1; /* Start fully opaque */
+  transform: translateX(0); /* Reset transform */
 }
 
-/* Heading for the skills section */
+/* Title styling */
 .skills-container h2 {
   color: rgb(27, 27, 70);
   margin-bottom: 30px;
@@ -84,12 +32,9 @@ p {
   border-radius: 10px;
   padding: 20px;
   transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
-  animation: fadeIn 0.5s ease-in-out; /* Animation for card appearance */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Base shadow */
-  position: relative; /* Position relative for pseudo-element */
 }
 
-/* Skill card title */
 .skill-card h3 {
   margin: 0;
   color: #2c3e50; /* Darker text color */
@@ -122,16 +67,39 @@ p {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
-/* Animation for fading in cards */
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-      transform: translateY(10px); /* Start slightly below */
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .skills-container {
+    padding: 40px; /* Reduced padding for smaller screens */
   }
-  to {
-      opacity: 1;
-      transform: translateY(0); /* End in place */
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Adjust for tablet size */
+  }
+
+  .skill-card {
+    padding: 15px; /* Reduced padding for skill cards */
+  }
+
+  .skills-container h2 {
+    font-size: 1.8em; /* Smaller font size */
   }
 }
 
-/* Remove media queries for responsiveness */
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 20px; /* Further reduced padding for mobile */
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr; /* Stack skill cards vertically */
+  }
+
+  .skill-card {
+    padding: 10px; /* Further reduced padding for skill cards */
+  }
+
+  .skills-container h2 {
+    font-size: 1.5em; /* Smaller font size */
+  }
+}

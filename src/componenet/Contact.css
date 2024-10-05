@@ -1,0 +1,98 @@
+/* Common container styling for contact section */
+.contact-container {
+  background-color: #BDBDBD; /* Light grey background for the contact section */
+  padding: 60px; /* Increased padding for vertical space */
+  max-width: 1500px; /* Maximum width */
+  width: 90%; /* Set width to 90% of the container */
+  margin: 20px auto; /* Centered with margin */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+  opacity: 0; /* Start fully transparent */
+  transform: translateY(50%); /* Start from below */
+  animation: slideIn 0.7s ease forwards; /* Slide-in animation */
+}
+
+.contact-container h2 {
+  color: #1B1B46; /* Dark blue color for headers */
+  text-align: center; /* Center align text */
+  margin-bottom: 30px;
+}
+
+/* Form styling */
+.contact-form {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+}
+
+/* Input and textarea styles */
+.contact-form input,
+.contact-form textarea {
+  border: 2px solid #ddd; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 15px; /* Padding for inputs */
+  margin-bottom: 20px; /* Space between fields */
+  font-size: 1em; /* Font size */
+  transition: border-color 0.3s; /* Smooth transition */
+  width: 100%; /* Make inputs full width */
+}
+
+/* Focus effect for inputs */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #1B1B46; /* Dark blue border on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Button styles */
+.contact-form button {
+  background-color: #1B1B46; /* Dark blue background */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 15px; /* Padding for button */
+  font-size: 1.1em; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Button hover effect */
+.contact-form button:hover {
+  background-color: #34495e; /* Darker blue on hover */
+}
+
+/* Thank you message styling */
+.thank-you-message {
+  text-align: center; /* Center align text */
+  color: #2c3e50; /* Darker text color */
+  margin-top: 20px; /* Space above */
+}
+
+/* Keyframes for the slide-in animation */
+@keyframes slideIn {
+  from {
+    opacity: 0; /* Start fully transparent */
+    transform: translateY(20px); /* Start slightly below */
+  }
+  to {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide to original position */
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 15px; /* Reduced padding for smaller screens */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 3px; /* Reduced padding for inputs */
+    font-size: 0.9em; /* Smaller font size */
+  }
+
+  .contact-form button {
+    padding: 15px; /* Reduced padding for button */
+    font-size: 1em; /* Smaller font size */
+  }
+}

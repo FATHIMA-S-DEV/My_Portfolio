@@ -3,6 +3,7 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [isTransparent, setIsTransparent] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // State for the toggle bar
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
@@ -10,6 +11,14 @@ const Navbar = () => {
     } else {
       setIsTransparent(false); // Keep navbar blue when at the top
     }
+  };
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen); // Toggle the menu open/close
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false); // Close the menu
   };
 
   useEffect(() => {
@@ -21,15 +30,17 @@ const Navbar = () => {
 
   return (
     <header className={`nav ${isTransparent ? 'header-transparent' : ''}`}>
-      <div className='side'>
-        <span>Portfolio...</span>
+      <div className="toggle-bar" onClick={toggleMenu}>
+        {/* Hamburger icon */}
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
       </div>
-      <nav className='navigation'>
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#skill">SKILL</a>
-        <a href="#contact">CONTACT</a>
-        <a href="#projects">PROJECT</a>
+      <nav className={`navigation ${isOpen ? 'open' : ''}`}>
+        <a href="#home" onClick={closeMenu}>HOME</a>
+        <a href="#about" onClick={closeMenu}>ABOUT</a>
+        <a href="#contact" onClick={closeMenu}>CONTACT</a>
+        <a href="#projects" onClick={closeMenu}>PROJECT</a>
       </nav>
     </header>
   );
