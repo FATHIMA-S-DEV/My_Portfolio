@@ -1,58 +1,86 @@
 .footer-container {
-  background-color: #989898; /* Background color matching the theme */
-  color: #ffffff; /* White text for contrast */
-  padding: 20px; /* Padding for spacing */
-  border-top: 1px solid #ddd; /* Top border for separation */
+  background-color: rgb(27, 27, 70); /* Darker background for better contrast */
+  color: gold;
+  padding: 20px;
+  border-top: 1px solid #ddd;
 }
 
 .footer-content {
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space between items */
-  align-items: center; /* Center items vertically */
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px; /* Max width for centered layout */
+  margin: 0 auto; /* Center the footer content */
 }
 
 .social-links {
-  display: flex; /* Flexbox for the social links section */
-  align-items: center; /* Center items vertically */
+  display: flex;
+  flex-direction: column; /* Stack social links in column */
+  align-items: flex-start; /* Align text to the left */
 }
 
 .footer-links {
-  list-style-type: none; /* Remove bullet points */
-  padding: 0; /* Remove default padding */
-  margin-left: 15px; /* Space between text and links */
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
 }
 
 .footer-links li {
-  display: inline; /* Inline list items */
-  margin: 0 10px; /* Spacing between links */
+  margin-right: 15px;
 }
 
 .footer-links a {
-  color: #ffffff; /* White link color */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s; /* Smooth color transition */
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .footer-links a:hover {
-  color: #ffd700; /* Gold color on hover */
+  color: #ffd700;
 }
 
 .footer-bottom {
-  font-size: 14px; /* Smaller font size for copyright */
-  text-align: center; /* Center the copyright text */
-  margin-top: 10px; /* Space above the copyright text */
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+  width: 100%; /* Ensure copyright text takes full width */
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .footer-content {
-      flex-direction: column; /* Stack items vertically in mobile view */
-      align-items: flex-start; /* Align items to the left */
+    flex-direction: column;
+    align-items: center; /* Center align for small screens */
   }
 
   .footer-links {
-      margin-left: 0; /* Remove left margin in mobile view */
-      margin-top: 10px; /* Space above the links */
+    margin-top: 15px;
+    justify-content: center; /* Center links on mobile */
   }
+
+  .social-links p {
+    text-align: center; /* Center the "Connect with me" text */
+  }
+
+  .footer-links li {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 15px;
+  }
+
+  .footer-content {
+    padding: 0 10px; /* Reduce padding for smaller screens */
+  }
+
+  .footer-links a {
+    font-size: 14px; /* Smaller font for links on small screens */
+  }
+}
+.pf{
+  color: gold;
 }

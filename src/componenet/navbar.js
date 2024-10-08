@@ -36,11 +36,14 @@ const Navbar = () => {
         <div className="bar"></div>
         <div className="bar"></div>
       </div>
+      <h2 className='gg' style={{color:"white"}}>Portfolio...</h2>
       <nav className={`navigation ${isOpen ? 'open' : ''}`}>
         <a href="#home" onClick={closeMenu}>HOME</a>
         <a href="#about" onClick={closeMenu}>ABOUT</a>
-        <a href="#contact" onClick={closeMenu}>CONTACT</a>
+        <a href="#skill" onClick={closeMenu}>SKILL</a>
         <a href="#projects" onClick={closeMenu}>PROJECT</a>
+        <a href="#contact" onClick={closeMenu}>CONTACT</a>
+        
       </nav>
     </header>
   );

@@ -1,0 +1,37 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease-in-out;
+    
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Default Background Color (Laptop/Desktop View) */
+body {
+    background-color:#BDBDBD;  /* Dark background */
+}
+
+/* Mobile View - Change Background Color */
+@media (max-width: 768px) {
+    body {
+        background-color: #BDBDBD; /* Blue background on mobile */
+    }
+}
+
+/* Tablet View - Change Background Color */
+@media (max-width: 992px) {
+    body {
+        background-color:  #BDBDBD; /* Green background on tablets */
+    }
+}
+
+/* Laptop/Desktop View */
+@media (min-width: 993px) {
+    body {
+        background-color: white;  /* Revert to default dark background on larger screens */
+    }
+}

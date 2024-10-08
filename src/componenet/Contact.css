@@ -18,11 +18,13 @@
   margin-bottom: 30px;
 }
 
+
 /* Form styling */
 .contact-form {
   display: flex;
   flex-direction: column; /* Stack items vertically */
 }
+
 
 /* Input and textarea styles */
 .contact-form input,
@@ -80,19 +82,79 @@
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .contact-container {
-    padding: 15px; /* Reduced padding for smaller screens */
+    padding: 40px; /* Adjust padding for tablet view */
   }
 
   .contact-form input,
   .contact-form textarea {
-    padding: 3px; /* Reduced padding for inputs */
-    font-size: 0.9em; /* Smaller font size */
+    padding: 12px; /* Adjust padding for inputs */
+    font-size: 1em; /* Maintain font size for medium screens */
   }
 
   .contact-form button {
-    padding: 15px; /* Reduced padding for button */
-    font-size: 1em; /* Smaller font size */
+    padding: 12px; /* Adjust padding for button */
+    font-size: 1em; /* Maintain font size for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 30px; /* Reduced padding for smaller screens */
+    max-width: 300px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px; /* Further reduced padding for inputs */
+    font-size: 0.9em; /* Smaller font size */
+    max-width: 250px;
+  }
+
+  .contact-form button {
+    padding: 10px; /* Further reduced padding for button */
+    font-size: 0.9em; /* Smaller font size */
+    max-width: 270px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 20px; /* Further reduced padding for mobile */
+    max-width: 330px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 8px; /* Further reduced padding for inputs */
+    font-size: 0.8em; /* Smaller font size */
+    margin-left: 20px;
+  }
+
+  .contact-form button {
+    padding: 8px; /* Further reduced padding for button */
+    font-size: 0.8em; /* Smaller font size */
+    margin-left: 20px;
+  }
+}
+@media (max-width: 750px) {
+  .contact-container {
+    padding: 20px; /* Further reduced padding for mobile */
+    max-width: 300px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 8px; /* Further reduced padding for inputs */
+    font-size: 0.8em; /* Smaller font size */
+ margin-right: 50px;
+    
+  }
+
+  .contact-form button {
+    padding: 8px; /* Further reduced padding for button */
+    font-size: 0.8em; /* Smaller font size */
+    margin-left: 20px;
   }
 }

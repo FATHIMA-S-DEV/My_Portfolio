@@ -13,6 +13,7 @@ body {
   animation: slideIn 0.7s ease forwards;
 }
 
+/* Button styles */
 .button-container {
   display: flex;
   justify-content: space-between;
@@ -38,14 +39,12 @@ body {
   background-color: rgb(27, 27, 70);
 }
 
-.learn-more-btn:hover {
-  background-color: gold;
-}
-
+.learn-more-btn:hover,
 .demo-btn:hover {
   background-color: gold;
 }
 
+/* Project container header */
 .projects-container h2 {
   text-align: left;
   font-size: 2.5rem;
@@ -56,43 +55,48 @@ body {
 .projects-grid {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .project-card {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px; /* Reduced padding for a compact card */
+  padding: 20px;
   text-align: center;
   transition: transform 0.3s ease;
-  height: 500px; /* Adjusted card height */
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1;
   width: 100%;
+  overflow: hidden; /* Prevents content from overflowing */
+  box-sizing: border-box; /* Include padding in total width/height */
 }
 
 .project-card:hover {
   transform: translateY(-5px);
 }
 
+/* Project images */
 .project-image {
   width: 100%;
-  height: 250px; /* Ensures all images have the same height */
-  object-fit: cover; /* Ensures images are resized uniformly */
+  height: 250px;
+  object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 20px; /* Space between image and content */
+  margin-bottom: 20px;
 }
 
-
-
+/* Project title */
 .project-card h4 {
   margin: 10px 0;
   color: rgb(27, 27, 70);
   font-size: 1.5rem;
 }
 
+/* Project description */
 .project-card p {
   font-size: 1rem;
   width: 80%;
@@ -102,26 +106,98 @@ body {
 /* Keyframes for the slide-in animation */
 @keyframes slideIn {
   from {
-      opacity: 0;
-      transform: translateX(-100%);
+    opacity: 0;
+    transform: translateX(-100%);
   }
   to {
-      opacity: 1;
-      transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .projects-container {
+    max-width: 90%; /* Decrease width for tablet view */
+    padding: 40px;
+  }
+
   .projects-grid {
-      flex-direction: column;
+    gap: 15px;
   }
 
   .project-card {
-      width: 90%;
+    height: 450px; 
+    width: 48%; /* Adjust card size */
   }
 
   .project-image {
-      height: 200px; /* Responsive height for mobile screens */
+    height: 220px; 
   }
+
+  .projects-container h2 {
+    font-size: 2rem; 
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    max-width: 95%; /* Further decrease width for mobile */
+    padding: 30px;
+  }
+
+  .projects-grid {
+    flex-direction: column; /* Stack project cards */
+  }
+
+  .project-card {
+    width: 100%; /* Full width for mobile view */
+    height: 400px; 
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  .projects-container h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-container {
+    padding: 20px;
+    max-width: 80%; /* Max width for small mobile screens */
+  }
+
+  .project-card {
+    padding: 15px;
+    height: 350px;
+  }
+
+  .project-image {
+    height: 180px;
+  }
+
+  .projects-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-card h4 {
+    font-size: 1.2rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+}
+.project-image {
+  width: 100%; /* Image takes the full width */
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  transition: transform 0.3s; /* Smooth transition for image scale */
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05); /* Slightly zoom in on hover */
 }

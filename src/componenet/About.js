@@ -1,11 +1,11 @@
-
 import React from 'react';
 import './About.css'; // Import your CSS file
 
 const About = () => {
     return (
         <div id="about" className="about-container">
-            <div className="about-content">
+            <div className="background-shape"></div>
+            <div className="about-content bounce-in"> {/* Added bounce-in class */}
                 <h1>About Me</h1>
                 <p>
                     Hi! I’m Fathima, a fresher in web development with a passion for creating user-friendly and responsive websites.
